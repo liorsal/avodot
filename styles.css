@@ -385,3 +385,99 @@ body {
         /* Mobile menu implementation usually needed here */
     }
 }
+
+/* Services Section */
+.services-section {
+    padding: 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-description {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    color: var(--accent-2);
+    background: rgba(255, 255, 255, 0.05);
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.services-footer {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.5;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.05), transparent 80%);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--card-border);
+}
+
+/* Adjustments for new Hero content */
+.hero-subtitle {
+    max-width: 900px !important;
+    /* Increase width for longer text */
+}
+
+@media (max-width: 768px) {
+    .section-description {
+        font-size: 1.1rem;
+    }
+
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+}
