@@ -487,3 +487,87 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Animations & Polish */
+
+/* Hero Content Animation */
+.hero-content {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.2s;
+}
+
+.hero-subtitle {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.cta-button {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Service Card Hover Pulse */
+.service-card:hover .service-icon {
+    animation: pulse 1s infinite;
+    color: var(--accent-1);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scroll Reveal Refinement - Overrides previous simpler definition */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered transition delays for grid items */
+.service-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.project-card:nth-child(odd) {
+    transition-delay: 0.1s;
+}
+
+.project-card:nth-child(even) {
+    transition-delay: 0.3s;
+}
